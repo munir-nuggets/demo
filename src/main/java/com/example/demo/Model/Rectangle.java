@@ -1,10 +1,10 @@
-package com.example.model;
+package com.example.demo.Model;
 
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "rectangles")
-public class rectangle {
+public class Rectangle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -13,11 +13,14 @@ public class rectangle {
     private int height;
     private String color;
 
-    public rectangle(String name, int width, int height, String color) {
+    public Rectangle(String name, int width, int height, String color) {
         this.name = name;
         this.width = width;
         this.height = height;
         this.color = color;
+    }
+
+    public Rectangle() {
     }
     public String getName() {
         return name;
